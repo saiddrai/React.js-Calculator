@@ -1,0 +1,11 @@
+.display {
+    background-color: rgb(88, 76, 59);
+    height: 8rem;
+    display: flex;
+    align-items: center;
+     justify-content: right;
+     padding: 10px;
+     font-size: 5rem;
+     font-family: cursive;
+    ;}
+    

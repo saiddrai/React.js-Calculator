@@ -1,0 +1,6 @@
+.buttonPanel{
+    height: 200px;
+    display: flex;
+    justify-content: stretch;
+    align-content: stretch;
+}
