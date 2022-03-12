@@ -9,7 +9,7 @@ function calculate(value,buttonName, type){
     if(type === "number"){
 
         if(buttonName >=0 || buttonName < 10 ){
-            secondNumber= secondNumber*10 + buttonName;console.log("we got one");
+            secondNumber= secondNumber*10 + buttonName;
             return secondNumber;
         }
     }

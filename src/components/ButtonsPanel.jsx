@@ -2,7 +2,6 @@ import { useState } from "react";
 import PropTypes from "prop-types"
 import Button from './Button';
 
-let i = 1;
 
 ButtonsPanel.propTypes = {
     handleClick: PropTypes.func,

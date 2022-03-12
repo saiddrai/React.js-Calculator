@@ -6,11 +6,8 @@ Button.propTypes = {
    handleClick: PropTypes.func,
  };
 function Button(props){
-    const [buttThing, setButtThingy] = useState("");
-    function test(){ console.log("test" + props.value) }
-
+    
      function handleClick(  ){ 
-        console.log("wiiw")
         props.clickHandler(props.buttonName, props.type);
     }
 return (

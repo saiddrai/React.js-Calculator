@@ -22,8 +22,6 @@ function App() {
       setValue(0);
       setDone(false);
     }
-    console.log(done);
-    console.log("in handleClick" + value);
     if(done){
       setValue(calculate(0,buttonName,type));
     }
