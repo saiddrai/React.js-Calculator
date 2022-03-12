@@ -18,19 +18,7 @@ function App() {
     
   }
   function handleClick(buttonName,type){
-    if(done){
-      setValue(0);
-      setDone(false);
-    }
-    if(done){
-      setValue(calculate(0,buttonName,type));
-    }
-    else{
-      setValue(calculate(value,buttonName,type));
-    }
-    if(buttonName === "="){
-      setDone(true);
-    }
+setValue(calculate(value,buttonName,type))
   }
   return (
     <div className="App">

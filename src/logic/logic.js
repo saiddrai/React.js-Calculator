@@ -5,7 +5,7 @@ let secondNumber = 0;
 let result = 0;
 function calculate(value,buttonName, type){
 
-    secondNumber = value;
+
     if(type === "number"){
 
         if(buttonName >=0 || buttonName < 10 ){
