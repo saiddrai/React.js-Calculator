@@ -3,70 +3,58 @@ let operator = '';
 let firstNumber = 0;
 let secondNumber = 0;
 let result = 0;
+let next = false;
 function calculate(value,buttonName, type){
 
 
     if(type === "number"){
 
         if(buttonName >=0 || buttonName < 10 ){
+            if(next){
+                firstNumber = 0;
+                next = false;
+            }
             secondNumber= secondNumber*10 + buttonName;
             return secondNumber;
         }
     }
     
     else if(buttonName === "+" || buttonName ==="-" || buttonName==="*" || buttonName ==="/" || buttonName==='='){
-        
-        
+    
         if(buttonName !== "="){
-            switch(operator){
+            operator = buttonName;
+        }
+
+        switch(operator){
                 case "+":
-                    firstNumber += value;
+                    firstNumber += secondNumber;
+                    secondNumber = 0;
                     break;
                 case "-":
-                    firstNumber -= value;
+                    firstNumber -= secondNumber;
+                    secondNumber = 0;
                     break;
                 case "*":
-                    firstNumber *= value;
+                    firstNumber *= secondNumber;
+                    secondNumber = 0;
                     break;
                 case "/":
-                    firstNumber /= value;
+                    firstNumber /= secondNumber;
+                    secondNumber = 0;
                     break;
                 default: break;
             }
-            operator = buttonName;
-            secondNumber= 0;
-       }
-       console.log(operator);
-        
-        if(buttonName ==="="){
-            switch(operator){
-                case "+":
-                    firstNumber= firstNumber + secondNumber;
-                    secondNumber=0;
-                    break;
-                    case "-":
-                        firstNumber= firstNumber - secondNumber;
-                        secondNumber=0;
-                        break;
-                        case "*":
-                            firstNumber= firstNumber * secondNumber;
-                            secondNumber=0;
-                            break;
-                            case "/":
-                                firstNumber= firstNumber / secondNumber;
-                                secondNumber=0;
-                    break;
-                default: break;
+
+            if(buttonName ==="="){
+                result = firstNumber;
+                next = true;
+                return result;
             }
-           result = firstNumber ;
-           //firstNumber=0;
-           secondNumber=0;
-           return result;
-        }
+            next = false;
+             return secondNumber;
+
     }
     
-    return secondNumber;
-
 }
 
 export default calculate;
