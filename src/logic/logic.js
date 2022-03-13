@@ -18,8 +18,22 @@ function calculate(value,buttonName, type){
         
         
         if(buttonName !== "="){
+            switch(operator){
+                case "+":
+                    firstNumber += value;
+                    break;
+                case "-":
+                    firstNumber -= value;
+                    break;
+                case "*":
+                    firstNumber *= value;
+                    break;
+                case "/":
+                    firstNumber /= value;
+                    break;
+                default: break;
+            }
             operator = buttonName;
-            firstNumber = secondNumber;
             secondNumber= 0;
        }
        console.log(operator);
@@ -45,7 +59,7 @@ function calculate(value,buttonName, type){
                 default: break;
             }
            result = firstNumber ;
-           firstNumber=0;
+           //firstNumber=0;
            secondNumber=0;
            return result;
         }

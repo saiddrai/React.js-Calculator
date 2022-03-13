@@ -3,9 +3,8 @@ import './App.css';
 import Display from './Display.jsx';
 import ButtonsPanel from './ButtonsPanel.jsx';
 import { useState } from 'react';
-import Button from './Button';
 import calculate from '../logic/logic.js';
-
+import "./App.css"
  
 function App() {
 
