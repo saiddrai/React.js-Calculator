@@ -10,6 +10,12 @@ ButtonsPanel.propTypes = {
 function ButtonsPanel(props){
     return(
         <div className="buttonPanel">
+            <div className="parameters">
+            <Button value = {props.value} setValue = {props.setValue} clickHandler = {props.handleClick} type = "parameter" buttonName = {"%"} key = {"mod"}/>
+            <Button value = {props.value} setValue = {props.setValue} clickHandler = {props.handleClick} type = "parameter" buttonName = {"+/-"} key = {"negative"}/>
+            <Button value = {props.value} setValue = {props.setValue} clickHandler = {props.handleClick} type = "parameter" buttonName = {"AC"} key = {"AC"}/>
+            </div>
+            <div className="numbers">
             <Button value = {props.value} setValue = {props.setValue} clickHandler = {props.handleClick} type = "number" buttonName = {1} key = {1}/>
             <Button value = {props.value} setValue = {props.setValue} clickHandler = {props.handleClick} type = "number" buttonName = {2} key = {2} />
             <Button value = {props.value} setValue = {props.setValue} clickHandler = {props.handleClick} type = "number" buttonName = {3} key = {3} />
@@ -20,11 +26,15 @@ function ButtonsPanel(props){
             <Button value = {props.value} setValue = {props.setValue} clickHandler = {props.handleClick} type = "number" buttonName = {8} key = {8}/>
             <Button value = {props.value} setValue = {props.setValue} clickHandler = {props.handleClick} type = "number" buttonName = {9} key = {9}/>
             <Button value = {props.value} setValue = {props.setValue} clickHandler = {props.handleClick} type = "number" buttonName = {0} key = {0}/>
+            </div>
+            <div className="operators">
+
             <Button value = {props.value} setValue = {props.setValue} clickHandler = {props.handleClick} type = "operator" buttonName = "+" key = {"+"}/>
             <Button value = {props.value} setValue = {props.setValue} clickHandler = {props.handleClick} type = "operator" buttonName = '-' key = {"-"}/>
             <Button value = {props.value} setValue = {props.setValue} clickHandler = {props.handleClick} type = "operator" buttonName = "*" key = {"*"}/>
             <Button value = {props.value} setValue = {props.setValue} clickHandler = {props.handleClick} type = "operator" buttonName = "/" key = {"/"}/>
             <Button value = {props.value} setValue = {props.setValue} clickHandler = {props.handleClick} type = "operator" buttonName = "=" key = {"="}/>
+            </div>
         </div>
     );
 

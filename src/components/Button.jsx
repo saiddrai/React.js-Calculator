@@ -7,7 +7,7 @@ Button.propTypes = {
  };
 function Button(props){
     
-     function handleClick(  ){ 
+     function handleClick(){ 
         props.clickHandler(props.buttonName, props.type);
     }
 return (

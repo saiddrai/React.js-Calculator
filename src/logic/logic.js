@@ -4,7 +4,14 @@ let firstNumber = 0;
 let secondNumber = 0;
 let result = 0;
 let next = false;
+let negative = false;
 function calculate(value,buttonName, type){
+    if(buttonName === "AC"){
+        return 0;
+    }
+    if(buttonName === "+/-"){
+        return value*(-1)
+    }
 
 
     if(type === "number"){
@@ -24,14 +31,25 @@ function calculate(value,buttonName, type){
         if(buttonName !== "="){
             operator = buttonName;
         }
+        if(buttonName ==="-"){
+            negative= true;
+        }
 
         switch(operator){
                 case "+":
+                    if(negative){
+                        secondNumber*=(-1);
+                        negative= false;
+                    }
                     firstNumber += secondNumber;
                     secondNumber = 0;
                     break;
                 case "-":
-                    firstNumber -= secondNumber;
+                    if(negative){
+                        secondNumber*=(-1);
+                        negative= false;
+                    }
+                    firstNumber =   secondNumber+firstNumber; console.log("first number : "+ firstNumber + "secondNumber" +secondNumber)
                     secondNumber = 0;
                     break;
                 case "*":
@@ -44,6 +62,7 @@ function calculate(value,buttonName, type){
                     break;
                 default: break;
             }
+            
 
             if(buttonName ==="="){
                 result = firstNumber;
