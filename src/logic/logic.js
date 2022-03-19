@@ -10,7 +10,8 @@ function calculate(value,buttonName, type){
         return 0;
     }
     if(buttonName === "+/-"){
-        return value*(-1)
+        secondNumber*=(-1)
+        return secondNumber;
     }
 
 
@@ -26,30 +27,25 @@ function calculate(value,buttonName, type){
         }
     }
     
-    else if(buttonName === "+" || buttonName ==="-" || buttonName==="*" || buttonName ==="/" || buttonName==='='){
+    else if(type === "operator"){
     
         if(buttonName !== "="){
             operator = buttonName;
+            firstNumber = secondNumber;
+            secondNumber = 0;
+            return 0;
         }
-        if(buttonName ==="-"){
-            negative= true;
-        }
+
 
         switch(operator){
                 case "+":
-                    if(negative){
-                        secondNumber*=(-1);
-                        negative= false;
-                    }
+                    
                     firstNumber += secondNumber;
                     secondNumber = 0;
                     break;
                 case "-":
-                    if(negative){
-                        secondNumber*=(-1);
-                        negative= false;
-                    }
-                    firstNumber =   secondNumber+firstNumber; console.log("first number : "+ firstNumber + "secondNumber" +secondNumber)
+
+                    firstNumber =   firstNumber-secondNumber; console.log("first number : "+ firstNumber + "secondNumber" +secondNumber)
                     secondNumber = 0;
                     break;
                 case "*":
