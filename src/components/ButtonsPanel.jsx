@@ -10,6 +10,8 @@ ButtonsPanel.propTypes = {
 function ButtonsPanel(props){
     return(
         <div className="buttonPanel">
+            <div className="left">
+
             <div className="parameters">
             <Button value = {props.value} setValue = {props.setValue} clickHandler = {props.handleClick} type = "parameter" buttonName = {"%"} key = {"mod"}/>
             <Button value = {props.value} setValue = {props.setValue} clickHandler = {props.handleClick} type = "parameter" buttonName = {"+/-"} key = {"negative"}/>
@@ -26,7 +28,10 @@ function ButtonsPanel(props){
             <Button value = {props.value} setValue = {props.setValue} clickHandler = {props.handleClick} type = "number" buttonName = {8} key = {8}/>
             <Button value = {props.value} setValue = {props.setValue} clickHandler = {props.handleClick} type = "number" buttonName = {9} key = {9}/>
             <Button value = {props.value} setValue = {props.setValue} clickHandler = {props.handleClick} type = "number" buttonName = {0} key = {0}/>
+            <Button value = {props.value} setValue = {props.setValue} clickHandler = {props.handleClick} type = "number" buttonName = {"."} key = {"."}/>
             </div>
+            </div>
+            
             <div className="operators">
 
             <Button value = {props.value} setValue = {props.setValue} clickHandler = {props.handleClick} type = "operator" buttonName = "+" key = {"+"}/>

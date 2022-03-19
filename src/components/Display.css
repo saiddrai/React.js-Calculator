@@ -1,6 +1,6 @@
 .display {
     background-color: rgb(88, 76, 59);
-    height: 8rem;
+    height: 20vh;
     display: flex;
     align-items: center;
      justify-content: right;
